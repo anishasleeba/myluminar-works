@@ -1,0 +1,12 @@
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+.mystyle{
+    display: flex;
+    justify-content: left;
+}
+.mystyle:hover{
+    background-color: #a5d5f8;
+    color: blue;
+}
