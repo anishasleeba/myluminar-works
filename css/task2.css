@@ -1,0 +1,24 @@
+body{ background-color: black;
+text-align: center
+;}
+h1{
+    color: white;
+}
+.row1{ 
+    margin-left: 29.5%;
+}
+.row2{ 
+    margin-top: 15%;
+    margin-left:21%;
+}
+.row3{ 
+    margin-top: 28.5%;
+    margin-left: 12.5%;
+}
+.colors{ 
+    margin: 6px;
+    width: 100px;
+    height: 150px;
+    float: left;
+}
+

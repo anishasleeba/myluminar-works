@@ -1,0 +1,42 @@
+body{
+    height: 2000px;
+    display: unset;
+}
+.row{
+    width: 300px;
+    height: 200px;
+    border: 1px solid blue;
+    background-color: brown;
+    position: relative;
+    margin-top: 10px;
+    float: left;
+}
+.child1,.child2,.child3{
+    border: 1px solid black;
+    width: 60px;
+    height: 70px;
+}
+.child1{
+    position: absolute;
+    /* left:10% */
+    background-color: blue;
+}
+.child2{
+    position: absolute;
+    left:40%;
+    background-color: chartreuse;
+}
+.child3{
+    position: absolute;
+    left:79.5%;
+    background-color: cyan;
+}
+.fixed{
+    width: 100px;
+    height: 100px;
+    background-color: darkmagenta;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    margin-left: 20px;
+}

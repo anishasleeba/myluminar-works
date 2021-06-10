@@ -1,0 +1,32 @@
+.block{
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    padding-top: 5px;
+}
+.blue{
+    background-color:blue;
+    color: cornsilk;
+}
+.red{
+    background-color:red;
+    color: cornsilk;
+}
+.img{
+    width: 85%;
+    height: 430px;
+}
+.write{
+    margin-top: -20px;
+    min-height: 200px;
+    
+}
+h1{
+    margin-bottom: -5px;
+}
+h2{
+    margin-bottom: -7px;
+}
+.bod{
+    margin-top: -20px;
+}
