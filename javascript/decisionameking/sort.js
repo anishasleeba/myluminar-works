@@ -1,4 +1,4 @@
-var num1 = 10, num2 = 30, num3 = 20;
+var num1 = 30, num2 = 10, num3 = 10;
 var result = "The numbers in descending order: "
 if (num1 > num2 & num1 > num3) {
     result += num1 + ",";
