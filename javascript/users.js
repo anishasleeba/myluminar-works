@@ -233,7 +233,9 @@ var users = [
 
   //print user names only
 //users.map(user=>user.name).forEach(name=>console.log(name));
-
+// for(let user of users){
+//   console.log(user.name);
+// }
 
 
 //print name and city of each user
@@ -244,5 +246,29 @@ var users = [
 //users.forEach(user=>console.log(user["name"]+"========"+user["address"]["geo"]["lat"]+"======="+user["address"]["geo"]["lng"]));
 
 
+// for(let user of users){
+//   console.log(user.name  +"=========" + user.address.city);
+// }
+  var todo={
+    person1:['sun','mon','tue','wed','thu','fri','sat'],
+    person2:['su','mo','te','we','th','fi','sa'],
+    person3:['sn','mo','tu','wd','tu','fr','st']
 
+  }
+  for(let tod in todo){
+    //console.log(todo[tod]);
+  }
+  //console.log(todo.person1);
+  var data = {
+    name: "Ankit",
+    age: 24,
+    workingDay: ["Mon", "Tue", "Wed", "Thu", "Fri"]
+  };
+  
+  for (const key in data) {
+    if (data.hasOwnProperty(key)) {
+      const element = data[key];
+        //console.log(key+": ", element);
+    }
+  }
   

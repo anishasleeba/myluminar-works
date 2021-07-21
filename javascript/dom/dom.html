@@ -1,4 +1,14 @@
 <!-- document object model -->
+<!-- var document={
+    url:"att1";
+    heads:"heading tag";
+    links:"links";
+    getElementById:function(){};
+    getElementsByTagName:function(){};
+    getElementsByClassName:function(){};
+    querySelector:function(){};
+    querySelectorAll:function(){};
+} -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,35 +26,33 @@
     <li class="second">3</li>
 </ul>
 <body>
-    
 </body>
 <script>
-    var hone=document.getElementsByTagName("h1");
-    for(let tag of hone){
-        tag.style.color="red";
+    var hone = document.getElementsByTagName("h1");
+    for (let tag of hone) {
+        tag.style.color = "red";
     }
-    var htwo=document.getElementsByTagName("h2");
-    for(let tag of htwo){
-        tag.style.color="green";
+    var htwo = document.getElementsByTagName("h2");
+    for (let tag of htwo) {
+        tag.style.color = "green";
     }
-    var hon=document.getElementById("hi");
-    hon.style.color="cyan";
+    var hon = document.getElementById("hi");
+    hon.style.color = "cyan";
     //other methods only for id
     //document.getElementById("hi").style.color="red";
     //hi.style.color="red";
-    var lit=document.getElementsByClassName("list");
-    for(let tag of lit){
-        tag.style.color="yellow";
+    var lit = document.getElementsByClassName("list");
+    for (let tag of lit) {
+        tag.style.color = "yellow";
     }
-    var lis=document.querySelectorAll(".second")
-    for(let tag of lis){
-        tag.style.color="pink";
+    var lis = document.querySelectorAll(".second")
+    for (let tag of lis) {
+        tag.style.color = "pink";
     }
     //var lis=document.querySelector(".second")
     //lis.style.color="pink";  only 1st li will change color
-    var htwo=document.querySelector("h2");
+    var htwo = document.querySelector("h2");
     //hi.textContent="<em>Document Object Model</em>"   to include only the content this is what should be used 
-    hi.innerHTML="<em>Document Object Model</em>"
-
+    hi.innerHTML = "<em>Document Object Model</em>"
 </script>
 </html>

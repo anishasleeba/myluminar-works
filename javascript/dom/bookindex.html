@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <input type="text" name=" " id="bk_name" placeholder="book name"><br>
+            <input type="text" id="autor" placeholder="author name"><br>
+            <input type="text" id="price" placeholder="price"><br>
+            <input type="text" id="copies" placeholder="no: of copies"><br>
+            <button onclick="createBook()">Create book</button>
+            <button onclick="listAllBooks()">List all books</button>
+        </div>
+        <div class="col-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <table class="table">
+                <tr>
+                    <td>Book Name</td>
+                    <td>Athor</td>
+                    <td>Price</td>
+                    <td>Copies available</td>
+                </tr>
+                <tbody id="result">
+    
+                </tbody>
+            </table>
+        </div>
+        <div class="col-4"></div>   
+    </div>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <input type="text" id="serch" placeholder="enter book name">
+            <button class="btn btn-success" onclick="findBook()">find</button>
+        </div>
+        <div class="col-4"></div>   
+    </div>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4" id="resultarea">
+            
+        </div>
+        <div class="col-4"></div>   
+    </div>
+</body>
+<script>
+    function populate(books){
+      let html_data="";
+      for(let book of books){
+          html_data+=`<tr><td>${book.book_name}</td><td>${book.author}</td><td>${book.amount}</td><td>${book.qty}</td></tr>`
+      }
+      result.innerHTML=html_data;
+    }
+    function createBook() {
+        let book_name = bk_name.value;
+        let author = autor.value;
+        let amount = price.value;
+        let qty = copies.value;
+        let book = {
+            book_name, author, amount, qty
+        }
+        if (!(book_name in localStorage)) {
+            localStorage.setItem(book_name, JSON.stringify(book));
+            alert("book created");
+            location.reload(true);
+        } else {
+            alert("book already exist with same name")
+        }
+    }
+    function listAllBooks() {
+        let books = [];
+        for (let i = 0; i < localStorage.length; i++) {
+            let key = localStorage.key(i);
+            let book = JSON.parse(localStorage.getItem(key));
+            //console.log(book.book_name);
+            books.push(book);
+        }
+        //console.log(books);
+        populate(books);
+    }
+    function findBook(){
+        let bname=serch.value;
+        if ( bname in localStorage) {
+            let book=JSON.parse(localStorage.getItem(bname));
+            console.log(book);
+        } else {
+            alert("book not found");
+        }
+    }
+</script>
+
+</html>
